@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #E0E5FA;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.about-us-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 4px;
+}
+
+footer {
+    text-align: center;
+    background-color: #E0E5FA;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,342 @@
+.profile-button {
+    width: 50px;
+    height: 70px; /* Adjust the height to accommodate the text */
+    border-radius: 50%;
+    background-color: transparent; /* Adjust the background color of the button */
+    color: #ffffff; /* Adjust the text color of the button */
+    border: none; /* Remove the button border */
+    cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+    display: flex;
+    flex-direction: column; /* Change to column to stack image and text */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Set the position of the button to relative */
+}
+.profile-text {
+    font-size: 14px; /* Adjust the font size of the text */
+    color: #19218f; /* Adjust the text color */
+    margin-top: 5px;
+}
+.profile-logo {
+    display: block; 
+}
+
+/* Style the profile symbol */
+.profile-button i {
+    transform: translateY(1px); /* Adjust the vertical alignment of the symbol (optional) */
+}
+
+/* Add a custom class for the nav-buttons container */
+.nav-buttons {
+    position: absolute;
+    top: 20px; /* Adjust the distance from the top as per your preference */
+    right: 20px; /* Adjust the distance from the right as per your preference */
+    display: flex; /* Set the container as flex */
+    flex-direction: row; /* Arrange the buttons in a row */
+    align-items: center; /* Align the buttons vertically in the middle of the container */
+    z-index: 2; /* Ensure the nav-buttons are in front of the image */
+    justify-content: flex-end;
+}
+
+.nav-container {
+    background-color: #e0e5fa; /* Set the background color for the nav-container */
+    padding: 10px; /* Add some padding to the container */
+}
+
+.nav-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Set the background color for the heading */
+    padding: 20px; /* Add padding to the heading container */
+}
+
+.nav-heading h1 {
+    margin: 0; /* Remove margin to align the heading in the center */
+}
+
+/* Style the nav-buttons buttons */
+.nav-buttons button {
+    margin: 7px; /* Add some spacing between the buttons */
+    padding: 7px 15px; /* Adjust the padding to change the button size */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Adjust the border radius to make the edges rounded */
+    font-size: 16px; /* Adjust the font size of the buttons */
+    color: #ffffff; /* Adjust the text color of the buttons */
+    background-color: #19218f; /* Adjust the background color of the buttons */
+    cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+}
+
+/* Style the nav-buttons buttons on hover */
+.nav-buttons button:hover {
+    background-color: #0d175e; /* Adjust the background color on hover */
+}
+
+.nav-buttons a {
+    text-decoration: none; /* Remove the underline */
+}
+
+
+/* Style the image container */
+.image {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh; /* Adjust the height as per your preference */
+}
+
+/* Style the image */
+.image img {
+    max-width: 100%; /* Ensure the image scales down properly on smaller screens */
+    max-height: 100%; /* Ensure the image scales down properly on smaller screens */
+}
+
+/* Style the profile symbol */
+.profile-button img {
+    width: 40px; /* Adjust the width of the profile image */
+    height: 40px; /* Adjust the height of the profile image */
+    border-radius: 50%;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    margin-top: 20px; /* Add some spacing from the image */
+}
+
+/* Add styles for the feature cards */
+.feature-card {
+    width: 270px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin: 20px; /* Add some spacing between cards */
+    display: flex; /* Use flexbox to center content vertically */
+    flex-direction: column; /* Arrange content in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: #e0e5fa;
+}
+
+.feature-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.feature-card .content {
+    padding: 30px;
+    text-align: center;
+}
+
+.feature-card .content h3 {
+    font-size: 24px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+
+.feature-card .content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.feature-card button {
+    background-color: #235fb9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feature-card button:hover {
+    background-color: #013d7d;
+}
+
+.entrance-tests {
+    background-color: #f4f4f4;
+    padding: 1px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.entrance-tests-heading {
+    margin-bottom: 1px;
+}
+
+.entrance-tests-heading h2 {
+    font-size: 32px;
+    color: #2e0771;
+}
+
+.entrance-tests-content {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #666;
+}
+
+.entrance-tests-button button {
+    background-color: #235fb9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 22px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.entrance-tests-button button:hover {
+    background-color: #013d7d;
+}
+
+.users-reviews {
+    background-color: #f4f4f4;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+    max-width: 500px; /* Adjust the max-width as per your preference */
+    margin-left: auto; /* To center the container horizontally */
+    margin-right: auto; /* To center the container horizontally */
+}
+
+.users-reviews h2 {
+    font-size: 28px;
+    color: #2e0771;
+    margin-bottom: 20px;
+}
+
+
+
+.review-form {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.review-form button {
+    background-color: #235fb9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.review-form button:hover {
+    background-color: #013d7d;
+}
+
+.user-review {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.user-review h4 {
+    font-size: 18px;
+    color: #2e0771;
+    margin-bottom: 5px;
+}
+
+.user-review p {
+    font-size: 16px;
+}
+
+.about-contact-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f4f4f4; /* Add a background color to the container */
+    padding: 1px; /* Optional: Add some padding around the buttons */
+}
+
+.about-button,
+.contact-button {
+    background-color: #235fb9;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 30px;
+    text-decoration: none;
+}
+
+.about-button:hover,
+.contact-button:hover {
+    background-color: #013d7d; /* Adjust the hover color as per your preference */
+}
+
+.want-to-know-container {
+    width: 60%;
+    margin: 0 auto; /* Center the container horizontally */
+    background-color: #030057; /* Dark blue background */
+    color: #ffffff; /* White text color */
+    padding: 40px 50px;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+.want-to-know-container h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.want-to-know-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.want-to-know-button a {
+    background-color: #c3caf3; /* White background */
+    color: #000000; /* Dark blue text color */
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.want-to-know-button a:hover {
+    background-color: #ffffff; /* Light gray background on hover */
+}

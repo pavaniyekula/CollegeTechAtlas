@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #E0E5FA;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 32px;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.entrance-test-container {
+    width: calc(25% - 20px);
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #F0F4FF;
+    display: inline-block; /* Display as inline-block to achieve side-by-side layout */
+    vertical-align: top; /* Align containers at the top */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.entrance-test-container h2 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.entrance-test-container p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-container a:first-child {
+    margin-right: 10px;
+}

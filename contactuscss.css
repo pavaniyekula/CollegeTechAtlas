@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #E0E5FA;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact-us-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #E0E5FA;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.icon-heading {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.contact-row h3 {
+    margin: 0;
+}
+
+.contact-row p {
+    margin: 0;
+    padding-top: 2px; 
+}

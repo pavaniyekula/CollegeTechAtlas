@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CollegeTechAtlas </title>
+    <link rel="stylesheet" href="mainwebpagecss.css">
+</head>
+<body>
+    <div class="nav-container">
+        <div class="nav-heading">
+            <h1>CollegeTechAtlas</h1>
+        </div>
+        <div class="nav-buttons">
+            <a href="login.html"><button>Sign In</button></a>
+            <a href="signup.html"><button>Sign Up</button></a>
+            <a class="profile-button" href="profile.html">
+                <img class="symbol" src="https://collegetechatlas.s3.amazonaws.com/imagescta/profilelogo.png" alt="profile logo">
+                <span class="profile-text">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="image">
+        <img src="https://collegetechatlas.s3.amazonaws.com/imagescta/mainwebpageimage.jpg" alt="Image" width="730px" height="420px">
+    </div>
+
+    <div class="features">
+        <!-- Search by College -->
+        <div class="feature-card">
+            <img src="https://collegetechatlas.s3.amazonaws.com/imagescta/collegewiselogo.png" alt="College Image">
+            <div class="content">
+                <h3>Search by College</h3>
+                <p>Find colleges based on their names and details.</p>
+                <a href="http://localhost/searchbycollege.php"><button>Explore</button></a>
+            </div>
+        </div>
+
+        <!-- Search by State -->
+        <div class="feature-card">
+            <img src="https://collegetechatlas.s3.amazonaws.com/imagescta/locationwiselogo.png" alt="Location Image">
+            <div class="content">
+                <h3>Search by Location</h3>
+                <p>Discover colleges in a specific state.</p>
+                <a href="http://localhost/searchbylocation.php"><button>Explore</button></a>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://collegetechatlas.s3.amazonaws.com/imagescta/topratedwiselogo.png" alt="State Image">
+            <div class="content">
+                <h3>Top Rated Colleges</h3>
+                <p>Discover the top-rated colleges.</p>
+                <a href="topratedcolleges.html"><button>Explore</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="college-search-results" id="collegeSearchResults">
+        <!-- Search results will be displayed here -->
+    </div>
+
+    <div class="entrance-tests">
+        <div class="entrance-tests-heading">
+            <h2>Entrance Tests</h2>
+        </div>
+        <div class="entrance-tests-content">
+            <p>We are here to help you with the comprehensive information about entrance tests for your college admissions. Whether you're looking for details about entrance exam patterns, syllabus, or practice resources, we've got you covered. Ace your entrance tests with CollegeTechAtlas!</p>
+        </div>
+        <div class="entrance-tests-button">
+            <a href="entrancetests.html"><button>Explore</button></a>
+        </div>
+    </div>
+
+    <div class="want-to-know-container">
+        <h2>Want to Know More?</h2>
+        <p>Discuss your current challenges with our mentors to get a customized plan that fits your needs.</p>
+        <div class="want-to-know-button">
+            <a href="tel:+917995822381">Call Us</a>
+        </div>
+    </div>
+    <div class="users-reviews">
+        <h2>Write a Review</h2>
+        <p>Share your thoughts and experiences to help others make informed decisions about CollegeTechAtlas!</p>
+        <div class="review-form">
+            <form id="reviewForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                    <label for="review">Review:</label>
+            <textarea id="review" name="review" required></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+        <div class="reviews-list">
+        </div>
+    </div>
+    
+    <div class="about-contact-buttons">
+        <a href="aboutus.html" class="about-button">About Us</a>
+        <a href="contactus.html" class="contact-button">Contact Us</a>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const reviewForm = document.getElementById('reviewForm');
+        const reviewsList = document.querySelector('.reviews-list');
+
+        reviewForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = e.target.username.value;
+            const review = e.target.review.value;
+
+            // Create a new user review element
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('user-review');
+
+            // Create and add username and review content
+            const usernameHeading = document.createElement('h4');
+            usernameHeading.textContent = username;
+            const reviewText = document.createElement('p');
+            reviewText.textContent = review;
+
+            reviewElement.appendChild(usernameHeading);
+            reviewElement.appendChild(reviewText);
+
+            // Add the user review to the reviews list
+            reviewsList.appendChild(reviewElement);
+
+            // Clear the form fields after submission
+            e.target.reset();
+        });
+
+        const exploreCollegeButton = document.getElementById('explore-college-button');
+        const collegeSearchResults = document.getElementById('collegeSearchResults');
+
+        exploreCollegeButton.addEventListener('click', function () {
+            fetch('search_college.php')
+                .then(response => response.text())
+                .then(data => {
+                    collegeSearchResults.innerHTML = data;
+                });
+        });
+    });
+</script>
+
+</body>
+</html>

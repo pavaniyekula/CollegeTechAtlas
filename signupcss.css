@@ -1,0 +1,154 @@
+/* Reset some default styles for better consistency */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.heading
+{
+    font-size: 36px; /* Adjust the font size to your preference */
+    color: #2b2a4e; /* Set the text color (you can use named colors or hex values) */
+    text-align: center; /* Align the heading to the center */
+    margin-top: 20px; 
+}
+/* Set the container to take the full viewport height */
+.container {
+    display: flex;
+    height: 80vh;
+}
+
+/* Divide the container into two sections */
+.image {
+    flex: 1; /* This section takes half of the container */
+    background-color: #8080b3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-left: 50px;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.signup {
+    flex: 1; /* This section takes half of the container */
+    display: flex;
+    flex-direction: column; /* Add this line to make the content stack vertically */
+    justify-content: center;
+    align-items: center;
+    background-color:transparent; 
+}
+
+.signup h2 {
+    font-size: 30px; /* Adjust the font size to your preference */
+    font-family: "Times New Roman", serif; /* Change this to your desired font family */
+    color: #22254a; /* Change this color to your desired heading text color */
+    text-align: center; /* Align the heading to the center */
+    margin-bottom: 15px; /* Add some margin at the bottom of the heading */
+    text-transform: uppercase; /* Convert the heading text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing for better visibility */
+}
+
+/* Style the form elements to appear on separate lines */
+.signup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup form input {
+    margin: 5px; /* Add some vertical margin between form inputs */
+}
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    padding-right: 1px;
+    width: 150px;
+}
+
+.form-group input {
+    flex: 1; /* Set the input fields to take two units of space */
+    background-color: #a9acd6; /* Add background color to the input boxes */
+    border: 3px solid #ffffff; /* Add border to the input boxes */
+    border-radius: 5px; /* Add rounded corners to the input boxes */
+    padding: 8px 12px; /* Add some padding inside the input boxes */
+}
+
+.show-password-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Add some space between the password input and show password checkbox */
+}
+
+.show-password-group label {
+    margin-right: 10px; /* Add some spacing between the label and the checkbox */
+}
+
+.show-password-group input[type="checkbox"] {
+    /* Style the appearance of the checkbox (optional) */
+    cursor: pointer;
+}
+
+/* Additional CSS for the login button */
+.form-group button[type="submit"] {
+    flex: 1; /* Set the button to take the available space */
+    background-color: #555a9f; /* Change this color to your desired button background color */
+    color: #ffffff; /* Change this color to your desired button text color */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    padding: 6px 20px; /* Add some padding inside the button */
+    cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+    font-size: 16px; /* Adjust the font size to your preference */
+    transition: background-color 0.3s ease; /* Add a smooth transition on hover */
+    margin-right: 10px; /* Add spacing between the buttons */
+}
+
+
+/* Hover effect for the login button */
+.form-group button[type="submit"]:hover {
+    background-color: #303053; /* Change this color to your desired button background color on hover */
+}
+
+/* Additional CSS for the Google login button */
+.form-group .google-signup {
+    background-color: #555a9f; /* Change this color to your desired Google button background color */
+    color: #ffffff; /* Change this color to your desired Google button text color */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    padding: 6px 20px; /* Add some padding inside the button */
+    cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+    font-size: 16px; /* Adjust the font size to your preference */
+    transition: background-color 0.3s ease; /* Add a smooth transition on hover */
+    margin-left: auto; /* Align the buttons to the right */
+    margin-right: 0;
+}
+
+
+.form-group #termsCheckboxWrapper {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.form-group #termsCheckbox {
+    margin: 0;
+    cursor: pointer;
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.form-group #termsCheckbox + label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.form-group label[for="termsCheckbox"] {
+    font-size: 15px; /* Adjust the font size for the text */
+}
