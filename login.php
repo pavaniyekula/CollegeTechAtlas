@@ -1,36 +1,25 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "collegeinfo";
+    $email_i = $_POST["email"];
+    $password_i = $_POST["password"];
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "collegeinfo";
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = mysqli_real_escape_string($conn, $_POST["email"]);
-    $password = $_POST["password"];
-
-    $sql = "SELECT * FROM users WHERE email = '$email'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows == 1) {
-        $row = $result->fetch_assoc();
-        if ($password == $row["password"]) {
-            session_start();
-            $_SESSION["email"] = $email; // Store the user's email in the session
-            header("Location: dashboard.php"); // Redirect to the logged-in page
-            exit();
-        } else {
-            echo "Invalid password";
-        }
-    } else {
-        echo "User not found";
+    $conn_database = mysqli_connect($servername, $username, $password, $database);
+    if (!$conn_database) {
+        echo "Connection error";
     }
-}
 
-$conn->close();
+    $sql = "SELECT * FROM `users` WHERE `email`='$email_i' AND `Password`='$password_i';";
+    $result = mysqli_query($conn_database, $sql);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        echo "Login successful!";
+    } else {
+        echo "Invalid username or password.";
+    }
+
+    mysqli_close($conn_database);
 ?>
